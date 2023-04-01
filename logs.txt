@@ -1,0 +1,204 @@
+D:\Users\38978\Documents\SI_2023_lab1_202042>git branc
+git: 'branc' is not a git command. See 'git --help'.
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git branch
+  bug1
+  bug2
+  bug3
+* master
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git checkout bug2
+Switched to branch 'bug2'
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git marge master
+git: 'marge' is not a git command. See 'git --help'.
+
+The most similar command is
+        merge
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git merge master
+Auto-merging SILab1.java
+Merge made by the 'ort' strategy.
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git push origin bug2
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 370 bytes | 370.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/darkoilioski/SI_2023_lab1_202042.git
+   4ee30d8..de39abd  bug2 -> bug2
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git checkout bug3
+Switched to branch 'bug3'
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git merge master
+Auto-merging SILab1.java
+Merge made by the 'ort' strategy.
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git push origin bug3
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 364 bytes | 364.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/darkoilioski/SI_2023_lab1_202042.git
+   a77c03f..2fd1a33  bug3 -> bug3
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git branch
+  bug1
+  bug2
+  bug3
+* master
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git merge bug2
+Updating 80d219e..de39abd
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/darkoilioski/SI_2023_lab1_202042.git
+   80d219e..de39abd  master -> master
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git checkout bug1
+Switched to branch 'bug1'
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git merge master
+Updating 80d219e..de39abd
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git push origin bug1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/darkoilioski/SI_2023_lab1_202042.git
+   80d219e..de39abd  bug1 -> bug1
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git checkout bug3
+Switched to branch 'bug3'
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git branch
+  bug1
+  bug2
+* bug3
+  master
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git merge master
+Auto-merging SILab1.java
+Merge made by the 'ort' strategy.
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git push origin bug3
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 369 bytes | 369.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/darkoilioski/SI_2023_lab1_202042.git
+   2fd1a33..bce3cf0  bug3 -> bug3
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git rebase origin/master
+Successfully rebased and updated refs/heads/bug3.
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git push origin bug3
+To https://github.com/darkoilioski/SI_2023_lab1_202042.git
+ ! [rejected]        bug3 -> bug3 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/darkoilioski/SI_2023_lab1_202042.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git status
+On branch bug3
+nothing to commit, working tree clean
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git push origin bug3 --force
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/darkoilioski/SI_2023_lab1_202042.git
+ + bce3cf0...369ab67 bug3 -> bug3 (forced update)
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git branch
+  bug1
+  bug2
+* bug3
+  master
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git merge bug3
+Updating de39abd..369ab67
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/darkoilioski/SI_2023_lab1_202042.git
+   de39abd..369ab67  master -> master
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git branch
+  bug1
+  bug2
+  bug3
+* master
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git checkout bug1
+Switched to branch 'bug1'
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git merge master
+Updating de39abd..369ab67
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git push origin bug1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/darkoilioski/SI_2023_lab1_202042.git
+   de39abd..369ab67  bug1 -> bug1
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git checkout bug2
+Switched to branch 'bug2'
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git merge master
+Updating de39abd..369ab67
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>
+D:\Users\38978\Documents\SI_2023_lab1_202042>git push origin bug2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/darkoilioski/SI_2023_lab1_202042.git
+   de39abd..369ab67  bug2 -> bug2
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git checkout bug3
+Switched to branch 'bug3'
+
+D:\Users\38978\Documents\SI_2023_lab1_202042>git merge master
+Already up to date.
